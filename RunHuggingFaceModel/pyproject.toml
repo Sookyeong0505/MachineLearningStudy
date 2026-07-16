@@ -1,0 +1,27 @@
+[project]
+name = "runmodel"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=5.0.0",
+    "fastapi>=0.139.0",
+    "ipykernel>=7.3.0",
+    "ipywidgets>=8.1.8",
+    "notebook>=7.6.0",
+    "path>=17.1.1",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+    "torch==2.9.0",
+    "transformers[torch]>=5.13.1",
+    "uvicorn>=0.51.0",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu129"
+url = "https://download.pytorch.org/whl/cu129"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu129", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
