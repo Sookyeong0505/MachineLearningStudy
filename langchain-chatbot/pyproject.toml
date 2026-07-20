@@ -1,0 +1,15 @@
+[project]
+name = "langchain-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "deeplake<4",
+    "langchain==0.1.20",
+    "langchain-community==0.0.38",
+    "openai>=2.46.0",
+    "selenium>=4.46.0",
+    "tiktoken>=0.13.0",
+    "unstructured>=0.21.5",
+]
