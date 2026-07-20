@@ -9,6 +9,7 @@ dependencies = [
     "langchain==0.1.20",
     "langchain-community==0.0.38",
     "openai>=2.46.0",
+    "python-dotenv>=1.2.2",
     "selenium>=4.46.0",
     "tiktoken>=0.13.0",
     "unstructured>=0.21.5",
