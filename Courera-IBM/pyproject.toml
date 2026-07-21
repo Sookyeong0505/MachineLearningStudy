@@ -1,0 +1,10 @@
+[project]
+name = "courera-ibm"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "ibm-watsonx-ai==1.0.8",
+    "langchain==0.2.11",
+    "langchain-core==0.2.43",
+    "langchain-ibm==0.1.7",
+]
