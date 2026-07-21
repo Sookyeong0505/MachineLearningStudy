@@ -119,29 +119,16 @@ response = ask(query)
 print(response)
 
 
-# # 대화기록 만들기
-# retrieved_chunks = [doc.page_content for doc in docs]
-#
-#
-# chunks_formatted = "\n\n".join(doc.page_content for doc in found)
-# prompt_formatted = prompt.format(chat_history=memory.buffer, chunks_formatted=chunks_formatted, query=query)
-#
-# # generate answer
-# llm = OpenAI(model="gpt-3.5-turbo-instruct", temperature=0)
-# answer = llm(prompt_formatted)
-# print(answer)
-#
-# # User query
-# query = "What was the 5th point about on the question how to remove spotify account?"
-#
-# # Retrieve relevant chunks
-# docs = db.similarity_search(query)
-# retrieved_chunks = [doc.page_content for doc in docs]
-#
-# # Format the chunks for the prompt
-# chunks_formatted = "nn".join(retrieved_chunks)
-#
-# # Simulate a conversation
-# response = chain.predict(**input_data)
-#
-# print(response)
+# ============================================================
+# 5. 실행 예시
+# ============================================================
+if __name__ == "__main__":
+    q1 = "How to check disk usage in linux?"
+    print("Q:", q1)
+    print("A:", ask(q1))
+    print("-" * 60)
+
+    # 두 번째 질문 — memory 덕분에 이전 대화 맥락이 이어집니다.
+    q2 = "What was the 5th point about on the question how to remove spotify account?"
+    print("Q:", q2)
+    print("A:", ask(q2))
